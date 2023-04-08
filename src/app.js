@@ -13,7 +13,7 @@ app.post('/sign-up', (req, res) => {
 
   
   if(typeof username != "string" || typeof avatar != "string" || !username || !avatar) {
-    res.status(401).send('Todos os campos são obrigatórios!');
+    res.status(400).send('Todos os campos são obrigatórios!');
     return;
   }
   
